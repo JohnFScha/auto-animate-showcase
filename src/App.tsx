@@ -38,7 +38,7 @@ function App() {
         <form onSubmit={createTodo} ref={formRef} className="collapse-content flex flex-col gap-5">
           <input type="text" name="name" className="input input-bordered" placeholder="Todo name" />
           <input type="text" name="info" className="input input-bordered" placeholder="Todo info" />
-          <input type="date" name="date" className="input input-bordered w-full" placeholder="Todo date" />
+          <input type="text" name="date" className="input input-bordered w-full" placeholder="DD/MM/YYYY" onFocus={(e) => e.target.type = 'date'} />
           <button type="submit" className="btn btn-accent">Create todo</button>
         </form>
       </section>
